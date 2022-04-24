@@ -1,3 +1,6 @@
+// TODO: Properly pass taskName variable through the 'add' emitted event (check AddTask.vue).
+// TODO: Add conditional emits to AddTask such that the user cannot submit an empty task name.
+
 <script setup>
 import { ref } from 'vue';
 import TaskList from './TaskList.vue';
@@ -32,6 +35,19 @@ function completeTask(taskID) {
 
 function deleteTask(taskID) {
   tasks.value = tasks.value.filter(task => task.id !== taskID);
+}
+
+function addTask(taskName) {
+  console.log(`Adding task: ${taskName}`);
+  const taskID = tasks.value.reduce((maxID, task) => Math.max(maxID, task.id), 0) + 1;
+  tasks.value = [
+    ...tasks.value,
+    {
+      id: taskID,
+      title: taskName,
+      completed: false,
+    },
+  ];
 }
 </script>
 <template>

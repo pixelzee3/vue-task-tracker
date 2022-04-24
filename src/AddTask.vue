@@ -1,13 +1,20 @@
 <script setup>
-  import { ref } from 'vue';
+import { ref } from 'vue';
 
-  const taskName = ref('');
+const taskName = ref('');
 </script>
 <template>
   <div class="mx-8">
-    <form class="flex justify-between space-x-4">
-      <input class="bg-slate-100 p-2 w-full grow" type="text" :v-model="taskName">
-      <button class="bg-blue-100 px-4 rounded ">Add</button>
+    <form
+      class="flex justify-between space-x-4"
+      @submit.prevent="$emit('add', taskName)"
+    >
+      <input
+        class="w-full grow bg-slate-100 p-2"
+        type="text"
+        :v-model="taskName"
+      />
+      <input type="submit" value="Add" class="rounded bg-blue-100 px-4" />
     </form>
   </div>
 </template>
