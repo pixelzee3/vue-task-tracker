@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from 'vue';
 import TaskList from './TaskList.vue';
+import AddTask from './AddTask.vue';
 
 const tasks = ref([
   {
@@ -36,6 +37,8 @@ function deleteTask(taskID) {
 <template>
   <div>
     <h1 class="mt-8 text-center text-4xl font-bold">Task Tracker</h1>
+    <div class="border-t-2 rounded mx-8 my-4"></div>
+    <AddTask @add="addTask"></AddTask>
     <div class="border-t-2 rounded mx-8 my-4"></div>
     <TaskList :tasks="tasks" @complete="completeTask" @delete="deleteTask" />
   </div>
