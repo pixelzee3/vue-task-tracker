@@ -28,11 +28,15 @@ function completeTask(taskID) {
     return task;
   });
 }
+
+function deleteTask(taskID) {
+  tasks.value = tasks.value.filter(task => task.id !== taskID);
+}
 </script>
 <template>
   <div>
     <h1 class="mt-8 text-center text-4xl font-bold">Task Tracker</h1>
     <div class="border-t-2 rounded mx-8 my-4"></div>
-    <TaskList :tasks="tasks" @complete="completeTask" />
+    <TaskList :tasks="tasks" @complete="completeTask" @delete="deleteTask" />
   </div>
 </template>

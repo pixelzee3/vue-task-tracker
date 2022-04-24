@@ -21,7 +21,7 @@ const props = defineProps({
       @click="$emit('complete', task.id)"
     >
       <h2 class="my-2 text-2xl font-semibold">{{ task.title }}</h2>
-      <button class="rounded bg-red-200 px-4" @click="$emit('delete', task.id)">Delete</button>
+      <button class="rounded bg-red-200 px-4" @click.stop="$emit('delete', task.id)">Delete</button>
     </div>
   </div>
 </template>
