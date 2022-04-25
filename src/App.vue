@@ -49,10 +49,8 @@ function addTask(taskName) {
 }
 </script>
 <template>
-  <div class="pt-8 px-4 md:px-8">
-    <h1 class="text-center text-4xl font-bold md:text-6xl">
-      Task Tracker
-    </h1>
+  <div class="mx-auto max-w-3xl px-4 pt-8 md:px-8">
+    <h1 class="text-center text-4xl font-bold md:text-6xl">Task Tracker</h1>
     <SeparatorComponent />
     <AddTask @add="addTask"></AddTask>
     <SeparatorComponent />
