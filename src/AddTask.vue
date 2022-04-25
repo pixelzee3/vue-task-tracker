@@ -12,7 +12,7 @@ const taskName = ref('');
       <input
         class="w-full grow bg-slate-100 p-2"
         type="text"
-        :v-model="taskName"
+        v-model="taskName"
       />
       <input type="submit" value="Add" class="rounded bg-blue-100 px-4" />
     </form>
