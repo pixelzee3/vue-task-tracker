@@ -13,7 +13,7 @@ const props = defineProps({
     <div
       v-for="task in props.tasks"
       :key="task.id"
-      class="delay-50 mt-4 flex justify-between rounded-lg px-2 py-4 transition-all first:mt-0"
+      class="delay-50 mt-4 md:mt-6 flex justify-between rounded-lg px-2 py-4 transition-all first:mt-0"
       :class="{
         'bg-green-100': task.completed,
         'bg-gray-100': !task.completed,
