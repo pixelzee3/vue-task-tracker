@@ -9,7 +9,7 @@ const props = defineProps({
 });
 </script>
 <template>
-  <div class="px-8">
+  <div>
     <div
       v-for="task in props.tasks"
       :key="task.id"

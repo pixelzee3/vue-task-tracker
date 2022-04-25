@@ -4,7 +4,7 @@ import { ref } from 'vue';
 const taskName = ref('');
 </script>
 <template>
-  <div class="mx-8">
+  <div>
     <form
       class="flex justify-between space-x-4"
       @submit.prevent="taskName ? $emit('add', taskName) : null"

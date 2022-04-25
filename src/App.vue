@@ -48,13 +48,13 @@ function addTask(taskName) {
 }
 </script>
 <template>
-  <div>
-    <h1 class="mt-8 text-center text-4xl font-bold md:text-6xl">
+  <div class="pt-8 px-8">
+    <h1 class="text-center text-4xl font-bold md:text-6xl">
       Task Tracker
     </h1>
-    <div class="mx-8 my-4 rounded border-t-2"></div>
+    <div class="my-4 rounded border-t-2"></div>
     <AddTask @add="addTask"></AddTask>
-    <div class="mx-8 my-4 rounded border-t-2"></div>
+    <div class="my-4 rounded border-t-2"></div>
     <TaskList :tasks="tasks" @complete="completeTask" @delete="deleteTask" />
   </div>
 </template>
