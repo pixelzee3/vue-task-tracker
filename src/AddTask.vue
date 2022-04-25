@@ -7,7 +7,7 @@ const taskName = ref('');
   <div class="mx-8">
     <form
       class="flex justify-between space-x-4"
-      @submit.prevent="$emit('add', taskName)"
+      @submit.prevent="taskName ? $emit('add', taskName) : null"
     >
       <input
         class="w-full grow bg-slate-100 p-2"

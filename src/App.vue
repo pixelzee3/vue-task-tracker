@@ -1,5 +1,3 @@
-// TODO: Add conditional emits to AddTask such that the user cannot submit an empty task name.
-
 <script setup>
 import { ref } from 'vue';
 import TaskList from './TaskList.vue';
