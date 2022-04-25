@@ -2,6 +2,7 @@
 import { ref } from 'vue';
 import TaskList from './TaskList.vue';
 import AddTask from './AddTask.vue';
+import SeparatorComponent from './SeparatorComponent.vue';
 
 const tasks = ref([
   {
@@ -52,9 +53,9 @@ function addTask(taskName) {
     <h1 class="text-center text-4xl font-bold md:text-6xl">
       Task Tracker
     </h1>
-    <div class="my-4 rounded border-t-2"></div>
+    <SeparatorComponent />
     <AddTask @add="addTask"></AddTask>
-    <div class="my-4 rounded border-t-2"></div>
+    <SeparatorComponent />
     <TaskList :tasks="tasks" @complete="completeTask" @delete="deleteTask" />
   </div>
 </template>
